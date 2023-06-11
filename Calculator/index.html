@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <h1 class="head1 head">Calculator</h1>
+    <h2 class="head2 head">Made by Mohammad Laraib</h2>
+    <div class="container">
+      <div class="calculator">
+        <form>
+          <div class="display">
+            <input type="text" name="display" class="this" />
+          </div>
+          <div class="button-row">
+            <input
+              type="button"
+              class="reset-buttons butt"
+              value="AC"
+              onclick="display.value = '' "
+            />
+            <input
+              type="button"
+              class="reset-buttons butt"
+              value="DEL"
+              onclick="display.value = display.value.toString().slice(0,-1)  "
+            />
+            <input type="button"  class="butt" value="." onclick="display.value+='.'" />
+            <input
+              type="button"
+              value="/"
+              class="operator butt"
+              onclick="display.value+='/'"
+            />
+          </div>
+          <div class="button-row">
+            <input type="button" class="butt" value="7" onclick="display.value+='7'" />
+            <input type="button" class="butt"  value="8" onclick="display.value+='8'" />
+            <input type="button"  class="butt" value="9" onclick="display.value+='9'" />
+            <input
+              type="button"
+              value="*"
+              class="operator butt"
+              onclick="display.value+='*'"
+            />
+          </div>
+          <div class="button-row">
+            <input type="button"  class="butt" value="4" onclick="display.value+='4'" />
+            <input type="button"  class="butt" value="5" onclick="display.value+='5' " />
+            <input type="button"  class="butt" value="6" onclick="display.value+='6'" />
+            <input
+              type="button"
+              class="operator butt"
+              value="-"
+              onclick="display.value+='-'"
+            />
+          </div>
+          <div class="button-row">
+            <input type="button" class="butt"  value="1" onclick="display.value+='1'" />
+            <input type="button" class="butt"  value="2" onclick="display.value+='2'" />
+            <input type="button"  class="butt" value="3" onclick="display.value+='3'" />
+            <input
+              type="button"
+              value="+"
+              class="operator butt"
+              onclick="display.value+='+'"
+            />
+          </div>
+          <div class="button-row1">
+            <input type="button" value="00" class="butt"  onclick="display.value+='00'" />
+            <input type="button" value="0"  class="butt" onclick="display.value+='0'" />
+            <input
+              type="button"
+              value="="
+              onclick="display.value = eval(display.value)"
+              class="equal butt"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
